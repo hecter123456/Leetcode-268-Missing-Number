@@ -14,11 +14,8 @@ class Solution():
     def missingNumber(self, nums):
         if nums == []:
             return 0
-        total = 0
-        for i in nums:
-            total += i
-        Sum = (1 + len(nums)) * len(nums) / 2
-        return int(Sum) - total
+        total = (1 + len(nums)) * len(nums) / 2
+        return int(total) - sum(nums)
 
 if __name__ == '__main__':
     unittest.main()
